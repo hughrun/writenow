@@ -1,0 +1,41 @@
+{
+  "name": "writenow",
+  "version": "1.0.0",
+  "description": "A command line utility to make static-site publishing easier.",
+  "main": "commands.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": ""
+  },
+  "man": "./man/writenow.1"
+  "keywords": [
+    "blog",
+    "CLI",
+    "eleventy",
+    "markdown",
+    "static-site",
+    "templates",
+    "unsplash"
+  ],
+  "author": {
+    "name": "Hugh Rundle",
+    "url": "https://www.hughrundle.net"
+  },
+  "license": "GPL-3.0-or-later",
+  "directories": {
+    "lib": "./lib"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "connect": "^3.6.6",
+    "dotenv": "^6.1.0",
+    "expand-tilde": "^2.0.2",
+    "inquirer": "^6.2.0",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.5",
+    "serve-static": "^1.13.2"
+  },
+  "bin": {
+    "writenow": "./index.js"
+  }
+}
