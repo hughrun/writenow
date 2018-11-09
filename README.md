@@ -49,6 +49,7 @@ You can also just use writenow to create markdown templates, without pushing any
   For file paths you must use the full path or use `~` to indicate the current user's path. e.g. for user Erika publishing with Eleventy, the following paths are equivalent and both valid:
 
   `~/eleventy/_output`
+  
   `/Users/erika/eleventy/_output/`
 
   **Do not use relative paths**. e.g. This will not work if you run a writenow command from a directory different to where you installed writenow: 

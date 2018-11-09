@@ -2,12 +2,13 @@
   "name": "writenow",
   "version": "1.0.0",
   "description": "A command line utility to make static-site publishing easier.",
+  "repository": "github:hughrun/writenow",
   "main": "commands.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": ""
   },
-  "man": "./man/writenow.1"
+  "man": "./man/writenow.1",
   "keywords": [
     "blog",
     "CLI",
