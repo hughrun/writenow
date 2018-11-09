@@ -74,6 +74,8 @@ You can also just use writenow to create markdown templates, without pushing any
 
   Displays the help page.
 
+  If you prefer, you can run **man writenow** to see this as a man page.
+
 #### writenow publish
 
   Syncs your local output directory with your remote directory. i.e. this 'publishes' any posts that you have generated on your local machine but not yet deployed to your server, and updates/transfers any other files that have been changed or added like images, RSS files or CSS.
