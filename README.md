@@ -34,7 +34,7 @@ You can also just use writenow to create markdown templates, without pushing any
 
 ## Usage
 
-  **`writenow _command_ [ _-flag_ ]`**
+  **writenow _command_ [ _-flag_ ]**
 
 ### COMMANDS
 
