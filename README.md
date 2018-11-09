@@ -34,17 +34,17 @@ You can also just use writenow to create markdown templates, without pushing any
 
 ## Usage
 
-  **writenow _command_ [ _-flag_ ]**
+  **`writenow _command_ [ _-flag_ ]`**
 
 ### COMMANDS
 
 #### writenow backup
 
-  Creates a [gzip](https://www.gnu.org/software/gzip/) archive of your specified INPUT directory in a `backup` subdirectory where you installed writenow. If you use the `-o` flag it will back up the OUTPUT directory instead.
+  Creates a [gzip](https://www.gnu.org/software/gzip/) archive of your specified INPUT directory in a `backups` subdirectory where you installed writenow. If you use the `-o` flag it will back up the OUTPUT directory instead.
 
 #### writenow setup / writenow config
 
-  Guides you through setting up your writenow settings like tag and author defaults,  Unsplash API key, and remote server details. You can also use this command to change   your settings later: simply hit `[Enter]` to leave an existing setting unchanged. The config is saved in the directory where you saved writenow, with the filename `writenow.env`
+  Guides you through setting up your writenow settings like tag and author defaults,  Unsplash API key, and remote server details. You can also use this command to change   your settings later: simply hit \[Enter] to leave an existing setting unchanged. The config is saved in the directory where you saved writenow, with the filename `writenow.env`
 
   For file paths you must use the full path or use `~` to indicate the current user's path. e.g. for user Erika publishing with Eleventy, the following paths are equivalent and both valid:
 
@@ -52,22 +52,22 @@ You can also just use writenow to create markdown templates, without pushing any
   
   `/Users/erika/eleventy/_output/`
 
-  **Do not use relative paths**. e.g. This will not work if you run a writenow command from a directory different to where you installed writenow: 
+  *Do not use relative paths*. e.g. This will not work if you run a writenow command from a directory different to where you installed writenow: 
   
   `_output/`
 
   Local directories will automatically be given a trailing slash, and remote directories will automatically have any trailing slashes removed. This ensures that rsync behaviour is as expected when you run `writenow publish` and `writenow backup`.
 
-  ##### Unsplash API key
+  **Unsplash API key**
   The 'Client ID' from your Unsplash account. If you don't have one, leave it blank and writenow won't attempt to set an image for you.
 
-  ##### Where do you want your drafts to be saved? (INPUT)
+  **Where do you want your drafts to be saved? (INPUT)**
   This could be a drafts folder, but generally will be the directory that is processed by your static site generator. i.e. this is where your Markdown files are saved.
 
-  ##### Output path (OUTPUT)
+  **Output path (OUTPUT)**
   The directory where your processed files go. i.e. there should be an `index.html` file in this directory that is your homepage.
 
-  ##### Remote path
+  **Remote path**
   The path on your remote server that your webserver serves files from. On a Linux server it will usually be `/var/www/html`. writenow will remove any trailing slashes so that rsync doesn't do anything surprising.
 
 #### writenow help
@@ -94,19 +94,19 @@ You can also just use writenow to create markdown templates, without pushing any
 
 Flags change the default behavour of a command. You can use more than one at the same time.
 
-  #### -b
+  **-b**
 
   Using the *backup* `-b` flag after `writenow publish` will run a backup of your INPUT directory before publishing.
 
-  #### -i
+  **-i**
 
   Using the *image* `-i` flag after `writenow write` will skip image generation. You should only need to use this flag if you have assigned an API key with `writenow config` but do not want to use it for a particular post. If you have not set an API key (CLIENT_ID) the `-i` flag is assumed.
 
-  #### -k
+  **-k**
 
   Using the *keep* `-k` flag after `writenow publish` will retain any 'orphaned' directories and files that are on your remote server but not your local output directory, instead of deleting them.
 
-  #### -o
+  **-o**
 
   Using the *output* or `-o` flag after `writenow backup` or with `writenow publish -b` will back up the OUTPUT directory instead of the INPUT directory.
 
