@@ -2,3 +2,4 @@ writenow.env
 writenow.man.1.md
 node_modules/
 backups/*
+!backups/.gitkeep
