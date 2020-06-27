@@ -44,7 +44,7 @@ You can also just use writenow to create markdown templates, without pushing any
 
 #### writenow setup / writenow config
 
-  Guides you through setting up your writenow settings like tag and author defaults,  Unsplash API key, and remote server details. You can also use this command to change   your settings later: simply hit \[Enter] to leave an existing setting unchanged. The config is saved in the directory where you saved writenow, with the filename `writenow.env`
+  Guides you through setting up your writenow settings like tag and author defaults,  Unsplash API key, and remote server details. You can also use this command to change your settings later: simply hit \[Enter] to leave an existing setting unchanged. The config is saved in the directory where you saved writenow, with the filename `writenow.env`. You can edit this file manually if you wish to change it, or run `writenow config` again.
 
   For file paths you must use the full path or use `~` to indicate the current user's path. e.g. for user Erika publishing with Eleventy, the following paths are equivalent and both valid:
 

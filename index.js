@@ -29,7 +29,7 @@ const path = require('path');
 
 // require dotenv and pull environment variables from writenow.env
 // if it exists
-require('dotenv').config({path: `${path.resolve(__dirname, '..')}/writenow.env`});
+require('dotenv').config({path: path.resolve(process.cwd(), 'writenow.env')});
 
 const cmds = require('./lib/commands');
 
