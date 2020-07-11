@@ -38,7 +38,9 @@ if (process.argv[2] === 'write') {
 } else if (process.argv[2] === 'backup') {
   cmds.backup(process.argv)  
 } else if (process.argv[2] === 'config' || process.argv[2] === 'setup') {
-  cmds.config()  
+  cmds.config()
+} else if (process.argv[2] === 'process') {
+  cmds.publish(process.argv)
 } else if (process.argv[2] === 'publish') {
   cmds.publish(process.argv)
 } else if (process.argv[2] === 'test') {
