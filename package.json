@@ -1,6 +1,6 @@
 {
   "name": "writenow",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "A command line utility to make static-site publishing easier.",
   "repository": "github:hughrun/writenow",
   "main": "commands.js",
