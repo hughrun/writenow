@@ -27,14 +27,15 @@
     "lib": "./lib"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "chalk": "^2.4.2",
     "connect": "^3.7.0",
     "dotenv": "^6.2.0",
     "expand-tilde": "^2.0.2",
     "inquirer": "^6.5.2",
     "request": "^2.88.0",
-    "request-promise-native": "^1.0.7",
-    "serve-static": "^1.14.1"
+    "serve-static": "^1.14.1",
+    "wordpos": "^2.0.0"
   },
   "bin": {
     "writenow": "./index.js"

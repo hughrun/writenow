@@ -18,7 +18,7 @@ Now you can use writenow from any directory.
 
 ## Requirements
 
-writenow is a nodejs script and npm package. The easiest way to install it is using [npm](https://www.npmjs.com). writenow assumes you have the following software installed:
+writenow is a npm package for MacOS. The easiest way to install it is using [npm](https://www.npmjs.com). writenow assumes you have the following software installed:
 
 * [MacOS](https://en.wikipedia.org/wiki/MacOS)
 * [nodejs](https://nodejs.org/en/)
@@ -44,7 +44,7 @@ You can also just use writenow to create markdown templates, without pushing any
 
 #### writenow setup / writenow config
 
-  Guides you through setting up your writenow settings like tag and author defaults,  Unsplash API key, and remote server details. You can also use this command to change   your settings later: simply hit \[Enter] to leave an existing setting unchanged. The config is saved in the directory where you saved writenow, with the filename `writenow.env`
+  Guides you through setting up your writenow settings like tag and author defaults,  Unsplash API key, and remote server details. You can also use this command to change your settings later: simply hit \[Enter] to leave an existing setting unchanged. The config is saved in the directory where you saved writenow, with the filename `writenow.env`. You can edit this file manually if you wish to change it, or run `writenow config` again.
 
   For file paths you must use the full path or use `~` to indicate the current user's path. e.g. for user Erika publishing with Eleventy, the following paths are equivalent and both valid:
 
@@ -70,11 +70,18 @@ You can also just use writenow to create markdown templates, without pushing any
   **Remote path**
   The path on your remote server that your webserver serves files from. On a Linux server it will usually be `/var/www/html`. writenow will remove any trailing slashes so that rsync doesn't do anything surprising.
 
+  **Command for processing drafts**
+  This is generally the command on your static site generator that processes markdown files into HTML. For example `eleventy --quiet` or `jekyll build`.
+
 #### writenow help
 
   Displays the help page.
 
   If you prefer, you can run **man writenow** to see this as a man page.
+
+#### writenow process
+
+  Processes files in your INPUT_DIRECTORY using your static site generator's command (PROCESS_COMMAND). You can run 'writenow process' from anywhere.
 
 #### writenow publish
 
@@ -131,19 +138,6 @@ _Publish a new file but run a backup of the html, css etc in the OUTPUT director
 _Back up the OUTPUT directory, publish any changes, and retain all files on server_
 
 `writenow publish -bko`
-
-## Roadmap
-
-The following features are planned, though there's no specific timeline:
-
-* Linux compatability
-* Windows compatability
-* create your own frontmatter templates
-* use git instead of rsync to push to remote, for GitHub/GitLab Pages
-
-## TODOs
-
-I'll try to track these in 'Issues'.
 
 ## Contributing
 
