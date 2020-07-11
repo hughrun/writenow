@@ -2,10 +2,9 @@
 
 /* #####################################################################
     writenow
-    Version 1.0.0
     A CLI app to make your static-site publishing life easier 
 
-    Copyright (c) 2018 Hugh Rundle
+    Copyright (c) 2018, 2020 Hugh Rundle
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -40,7 +39,7 @@ if (process.argv[2] === 'write') {
 } else if (process.argv[2] === 'config' || process.argv[2] === 'setup') {
   cmds.config()
 } else if (process.argv[2] === 'process') {
-  cmds.publish(process.argv)
+  cmds.process(process.argv)
 } else if (process.argv[2] === 'publish') {
   cmds.publish(process.argv)
 } else if (process.argv[2] === 'test') {
