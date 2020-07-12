@@ -2,10 +2,8 @@
 
 /* #####################################################################
     writenow
-    Version 1.0.0
     A CLI app to make your static-site publishing life easier 
-
-    Copyright (c) 2018 Hugh Rundle
+    Copyright (c) 2018, 2020 Hugh Rundle
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -20,8 +18,7 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-    You can contact Hugh on Twitter @hughrundle
-    or email hugh [at] hughrundle [dot] net
+    You can contact Hugh by email: hugh [at] hughrundle [dot] net
  ##################################################################### */
 
 // require nodejs components
@@ -33,20 +30,23 @@ require('dotenv').config({path: path.resolve(process.cwd(), 'writenow.env')});
 
 const cmds = require('./lib/commands');
 
-if (process.argv[2] === 'write') {
-  cmds.write(process.argv)
-} else if (process.argv[2] === 'backup') {
-  cmds.backup(process.argv)  
-} else if (process.argv[2] === 'config' || process.argv[2] === 'setup') {
-  cmds.config()
-} else if (process.argv[2] === 'process') {
-  cmds.publish(process.argv)
-} else if (process.argv[2] === 'publish') {
-  cmds.publish(process.argv)
-} else if (process.argv[2] === 'test') {
-  cmds.test()    
-} else if (process.argv[2] === 'help') {
+// if 'help' anywhere in the commands, go to help
+if (process.argv.includes('help')) {
   cmds.help(process.argv)
 } else {
-  cmds.hint(process.argv[2])
+  if (process.argv[2] === 'write') {
+    cmds.write(process.argv)
+  } else if (process.argv[2] === 'backup') {
+    cmds.backup(process.argv)  
+  } else if (process.argv[2] === 'config' || process.argv[2] === 'setup') {
+    cmds.config()
+  } else if (process.argv[2] === 'process') {
+    cmds.process(process.argv)
+  } else if (process.argv[2] === 'publish') {
+    cmds.publish(process.argv)
+  } else if (process.argv[2] === 'test') {
+    cmds.test()
+  } else {
+    cmds.hint(process.argv[2])
+  }
 }
