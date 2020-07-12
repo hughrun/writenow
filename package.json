@@ -15,7 +15,6 @@
     "eleventy",
     "markdown",
     "static-site",
-    "templates",
     "unsplash"
   ],
   "author": {
