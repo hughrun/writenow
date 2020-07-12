@@ -32,20 +32,23 @@ require('dotenv').config({path: path.resolve(process.cwd(), 'writenow.env')});
 
 const cmds = require('./lib/commands');
 
-if (process.argv[2] === 'write') {
-  cmds.write(process.argv)
-} else if (process.argv[2] === 'backup') {
-  cmds.backup(process.argv)  
-} else if (process.argv[2] === 'config' || process.argv[2] === 'setup') {
-  cmds.config()
-} else if (process.argv[2] === 'process') {
-  cmds.process(process.argv)
-} else if (process.argv[2] === 'publish') {
-  cmds.publish(process.argv)
-} else if (process.argv[2] === 'test') {
-  cmds.test()    
-} else if (process.argv[2] === 'help') {
+// if 'help' anywhere in the commands, go to help
+if (process.argv.includes('help')) {
   cmds.help(process.argv)
 } else {
-  cmds.hint(process.argv[2])
+  if (process.argv[2] === 'write') {
+    cmds.write(process.argv)
+  } else if (process.argv[2] === 'backup') {
+    cmds.backup(process.argv)  
+  } else if (process.argv[2] === 'config' || process.argv[2] === 'setup') {
+    cmds.config()
+  } else if (process.argv[2] === 'process') {
+    cmds.process(process.argv)
+  } else if (process.argv[2] === 'publish') {
+    cmds.publish(process.argv)
+  } else if (process.argv[2] === 'test') {
+    cmds.test()
+  } else {
+    cmds.hint(process.argv[2])
+  }
 }
