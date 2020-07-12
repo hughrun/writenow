@@ -3,7 +3,6 @@
 /* #####################################################################
     writenow
     A CLI app to make your static-site publishing life easier 
-
     Copyright (c) 2018, 2020 Hugh Rundle
 
     This program is free software: you can redistribute it and/or modify
