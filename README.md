@@ -1,6 +1,8 @@
 # writenow
 A command line utility to make static-site publishing easier.
 
+`writenow` is no longer under active development and has some weaknesses. You may prefer to use [lette.rs](https://github.com/hughrun/lette.rs)
+
 **writenow** is a utility to help you to create [frontmatter](https://jekyllrb.com/docs/front-matter/) for [static site pages](https://davidwalsh.name/introduction-static-site-generators), test your posts locally, and deploy them to a remote server. It currently runs on MacOS only, but will be updated to run on most Linux and Windows soon(ish).
 
 ## Installation
