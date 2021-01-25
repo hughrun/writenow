@@ -26,7 +26,7 @@
     "lib": "./lib"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "chalk": "^2.4.2",
     "connect": "^3.7.0",
     "dotenv": "^6.2.0",
